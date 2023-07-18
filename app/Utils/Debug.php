@@ -15,6 +15,5 @@ class Debug
     echo "<pre>";
     print_r($bug);
     echo "</pre>";
-    exit();
   }
 }
