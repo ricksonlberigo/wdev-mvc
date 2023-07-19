@@ -2,7 +2,6 @@
 
 use App\Http\Response;
 use App\Controller\Pages;
-use App\Utils\Debug;
 
 require_once __DIR__ . "/../vendor/autoload.php";
 

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Middleware\Maintenance;
+use App\Http\Middleware\Queue;
 use App\Utils\View;
 use WilliamCosta\DotEnv\Environment;
 use WilliamCosta\DatabaseManager\Database;
@@ -23,4 +25,14 @@ define('URL', getenv('URL'));
 // DEFINE O VALOR PADRÃO DAS VARIÁVEIS
 View::init([
   'URL' => URL
+]);
+
+// DEFINE O MAPEAMENTO DE MIDDLEWARES
+Queue::setMap([
+  'maintenance' => Maintenance::class
+]);
+
+// DEFINE O MAPEAMENTO DE MIDDLEWARES PADRÕES UTILIZADOS EM TODAS AS ROTAS
+Queue::seDefault([
+  'maintenance'
 ]);
