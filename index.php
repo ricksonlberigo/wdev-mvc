@@ -1,16 +1,8 @@
 <?php
 
 use App\Http\Router;
-use App\Utils\View;
 
-define('URL', "http://localhost:8000");
-
-require_once __DIR__ . "/vendor/autoload.php";
-
-// DEFINE O VALOR PADRÃO DAS VARIÁVEIS
-View::init([
-  'URL' => URL
-]);
+require_once __DIR__ . "/includes/app.php";
 
 // INICIA O ROUTER
 $obRouter = new Router(URL);
